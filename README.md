@@ -1,5 +1,7 @@
 # node-logicmachine-api
 
+[![Build Status](https://travis-ci.org/antonfisher/node-logicmachine-api.svg)](https://travis-ci.org/antonfisher/node-logicmachine-api)
+
 NodeJS API module for LogicMachine Remote services
 
 ![Logo](https://raw.githubusercontent.com/antonfisher/node-logicmachine-api/docs/images/node-lm-api.png)
