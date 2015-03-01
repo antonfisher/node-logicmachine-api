@@ -57,7 +57,7 @@ All methods with _callback_ will call it with _(err, data)_ params:
 
 `err {Error|undefined}`;
 
-`data {Object|Array|undefined}`.
+`data {Object|Array|Boolean|undefined}`.
 
 Objects address format:
 
