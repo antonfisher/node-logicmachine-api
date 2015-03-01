@@ -80,6 +80,14 @@ Run tests: `npm test`;
 
 Run Grunt watch: `grunt watch`.
 
+## Contributing
+
+Please take care to maintain the existing coding style, unit tests for any changed functionality. Eslint and test your code.
+
+## Release History
+
+* 0.1.0 Initial release
+
 ## Links:
 * [http://evika.ru/](http://evika.ru/)
 
