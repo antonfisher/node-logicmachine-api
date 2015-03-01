@@ -14,6 +14,19 @@ Tested on v3 (LogicMachine3 Light).
 
 ## Usage
 
+Module init params:
+
+```javascript
+var logicmachineApi = require('node-logicmachine-api')(
+    host,       // default '192.168.0.10:80'
+    username,   // default 'remote'
+    password,   // default 'remote'
+    protocol,   // default 'http'
+    format,     // default 'json' ['json', 'xml', 'rss']
+    apiPath     // default '/cgi-bin/scada-remote/request.cgi'
+)
+```
+
 ```javascript
 var logicmachineApiDefault = require('node-logicmachine-api')();
 
@@ -21,19 +34,17 @@ logicmachineApiDefault.setObjectValue('1/1/1/', '1', function (err, data) {
     if (err) {
         console.log('Error: ' + err);
     }
-
     // do stuff
 });
 ```
 
 ```javascript
-var logicmachineApiCustom = require('node-logicmachine-api')('10.10.10.10:8080', 'bob', 'sponge', 'https');
+var logicmachineApiCustom = require('node-logicmachine-api')('10.10.10.10:8080', 'bob', 'sponge');
 
 logicmachineApiCustom.getObjects(function (err, data) {
     if (err) {
         console.log('Error: ' + err);
     }
-
     // do stuff
 });
 ```
