@@ -12,6 +12,32 @@ Tested on v3 (LogicMachine3 Light).
 
 `npm install --save node-logicmachine-api`
 
+## Usage
+
+```javascript
+var logicmachineApiDefault = require('node-logicmachine-api')();
+
+logicmachineApiDefault.setObjectValue('1/1/1/', '1', function (err, data) {
+    if (err) {
+        console.log('Error: ' + err);
+    }
+
+    // do stuff
+});
+```
+
+```javascript
+var logicmachineApiCustom = require('node-logicmachine-api')('10.10.10.10:8080', 'bob', 'sponge', 'https');
+
+logicmachineApiCustom.getObjects(function (err, data) {
+    if (err) {
+        console.log('Error: ' + err);
+    }
+
+    // do stuff
+});
+```
+
 ## Methods
 
 All methods with _callback_ will call it with _(err, data)_ params:
@@ -36,6 +62,12 @@ Objects address format:
 | `sendResponseToKNXObject(address, value, callback)` | address _{String}_ __[required]__ <br> value _{String}_ __[required]__ <br> callback _{Function}_ <br><br> Send response to KNX by object address |
 | `sendReadToKNXObject(address, value, callback)` | address _{String}_ __[required]__ <br> callback _{Function}_ <br><br> Send _read_ message to KNX by object address |
 | `createUrl(query)` | query _{Object}_ object of URL params <br><br> Create custom API url |
+
+## Development
+
+Run tests: `npm test`;
+
+Run Grunt watch: `grunt watch`.
 
 ## Links:
 * [http://evika.ru/](http://evika.ru/)
