@@ -26,26 +26,16 @@ Objects address format:
 
 |Method|Description|
 |---|---|
-| `getAlerts(callback)` | _callback {_Function_} |
-|| Returns the last 50 alerts, `data:{}` |
-| `getErrors(callback)` | _callback {_Function_} |
-|| Returns the last 50 errors |
-| `getObjects(callback)` | _callback {_Function_} |
-|| Returns objects marked as _export_ sorted by last update time |
-| `findObject(address, callback)` | _address {String}_ __[required]__; _callback {_Function_} |
-|| Returns object value by address |
-| `getObjectValue(address, callback)` | _address {String}_ __[required]__; _callback {_Function_} |
-|| Returns current object value by address |
-| `setObjectValue(address, value, callback)` | _address {String}_ __[required]__; _value {String}_ __[required]__; _callback {_Function_} |
-|| Set object value by address |
-| `setObjectValueWithoutKNX(address, value, callback)` | _address {String}_ __[required]__; _value {String}_ __[required]__; _callback {_Function_} |
-|| Set object value by address without sending message to KNX |
-| `sendResponseToKNXObject(address, value, callback)` | _address {String}_ __[required]__; _value {String}_ __[required]__; _callback {_Function_} |
-|| Send response to KNX by object address |
-| `sendReadToKNXObject(address, value, callback)` | _address {String}_ __[required]__; _callback {_Function_} |
-|| Send _read_ message to KNX by object address |
-| `createUrl(query)` | _query {Object}_ object of URL params; |
-|| Create custom API url |
+| `getAlerts(callback)` | callback _{Function}_ <br><br> Returns last 50 alerts |
+| `getErrors(callback)` | callback _{Function}_ <br><br> Returns last 50 errors |
+| `getObjects(callback)` | callback _{Function}_ <br><br> Returns objects marked as _export_ sorted by last update time |
+| `findObject(address, callback)` | address _{String}_ __[required]__ <br> callback _{Function}_ <br><br> Returns object value by address |
+| `getObjectValue(address, callback)` | address _{String}_ __[required]__ <br> callback _{Function} <br><br> Returns current object value by address |
+| `setObjectValue(address, value, callback)` | address _{String}_ __[required]__ <br> value _{String}_ __[required]__ <br> callback _{Function}_ <br><br> Set object value by address |
+| `setObjectValueWithoutKNX(address, value, callback)` | address _{String}_ __[required]__ <br> value _{String}_ __[required]__ <br> callback _{Function}_ <br><br> Set object value by address without sending message to KNX |
+| `sendResponseToKNXObject(address, value, callback)` | address _{String}_ __[required]__ <br> value _{String}_ __[required]__ <br> callback _{Function}_ <br><br> Send response to KNX by object address |
+| `sendReadToKNXObject(address, value, callback)` | address _{String}_ __[required]__ <br> callback _{Function}_ <br><br> Send _read_ message to KNX by object address |
+| `createUrl(query)` | query _{Object}_ object of URL params <br><br> Create custom API url |
 
 ## Links:
 * [http://evika.ru/](http://evika.ru/)
