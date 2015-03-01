@@ -30,7 +30,7 @@ Objects address format:
 | `getErrors(callback)` | callback _{Function}_ <br><br> Returns last 50 errors |
 | `getObjects(callback)` | callback _{Function}_ <br><br> Returns objects marked as _export_ sorted by last update time |
 | `findObject(address, callback)` | address _{String}_ __[required]__ <br> callback _{Function}_ <br><br> Returns object value by address |
-| `getObjectValue(address, callback)` | address _{String}_ __[required]__ <br> callback _{Function} <br><br> Returns current object value by address |
+| `getObjectValue(address, callback)` | address _{String}_ __[required]__ <br> callback _{Function}_ <br><br> Returns current object value by address |
 | `setObjectValue(address, value, callback)` | address _{String}_ __[required]__ <br> value _{String}_ __[required]__ <br> callback _{Function}_ <br><br> Set object value by address |
 | `setObjectValueWithoutKNX(address, value, callback)` | address _{String}_ __[required]__ <br> value _{String}_ __[required]__ <br> callback _{Function}_ <br><br> Set object value by address without sending message to KNX |
 | `sendResponseToKNXObject(address, value, callback)` | address _{String}_ __[required]__ <br> value _{String}_ __[required]__ <br> callback _{Function}_ <br><br> Send response to KNX by object address |
