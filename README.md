@@ -26,24 +26,23 @@ Objects address format:
 
 |Method|Description|
 |---|---|
-__[required]__
 | `getAlerts(callback)` | _callback {_Function_} |
 || Returns the last 50 alerts, `data:{}` |
 | `getErrors(callback)` | _callback {_Function_} |
 || Returns the last 50 errors |
 | `getObjects(callback)` | _callback {_Function_} |
 || Returns objects marked as _export_ sorted by last update time |
-| `findObject(address, callback)` | _address {String}_; _callback {_Function_} |
+| `findObject(address, callback)` | _address {String}_ __[required]__; _callback {_Function_} |
 || Returns object value by address |
-| `getObjectValue(address, callback)` | _address {String}_; _callback {_Function_} |
+| `getObjectValue(address, callback)` | _address {String}_ __[required]__; _callback {_Function_} |
 || Returns current object value by address |
-| `setObjectValue(address, value, callback)` | _address {String}_; _value {String}_; _callback {_Function_} |
+| `setObjectValue(address, value, callback)` | _address {String}_ __[required]__; _value {String}_ __[required]__; _callback {_Function_} |
 || Set object value by address |
-| `setObjectValueWithoutKNX(address, value, callback)` | _address {String}_; _value {String}_; _callback {_Function_} |
+| `setObjectValueWithoutKNX(address, value, callback)` | _address {String}_ __[required]__; _value {String}_ __[required]__; _callback {_Function_} |
 || Set object value by address without sending message to KNX |
-| `sendResponseToKNXObject(address, value, callback)` | _address {String}_; _value {String}_; _callback {_Function_} |
+| `sendResponseToKNXObject(address, value, callback)` | _address {String}_ __[required]__; _value {String}_ __[required]__; _callback {_Function_} |
 || Send response to KNX by object address |
-| `sendReadToKNXObject(address, value, callback)` | _address {String}_; _callback {_Function_} |
+| `sendReadToKNXObject(address, value, callback)` | _address {String}_ __[required]__; _callback {_Function_} |
 || Send _read_ message to KNX by object address |
 | `createUrl(query)` | _query {Object}_ object of URL params; |
 || Create custom API url |
