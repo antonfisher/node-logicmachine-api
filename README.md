@@ -2,7 +2,7 @@
 
 NodeJS API module for LogicMachine Remote services
 
-![Logo](https://github.com/antonfisher/extjs-d3pie-chart/raw/docs/images/node-lm-api.png)
+![Logo](https://raw.githubusercontent.com/antonfisher/node-logicmachine-api/docs/images/node-lm-api.png)
 
 ## LogicMahine Versions
 
