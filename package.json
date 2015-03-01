@@ -1,0 +1,40 @@
+{
+  "name": "node-logicmachine-api",
+  "version": "0.1.0",
+  "description": "LogicMachine Remote services API (evika.ru)",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antonfisher/node-logicmachine-api"
+  },
+  "keywords": [
+    "logicmachine",
+    "evika"
+  ],
+  "author": {
+    "name": "Anton Fischer",
+    "email": "a.fschr@gmail.com",
+    "url": "http://antonfisher.com"
+  },
+  "license": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/antonfisher/node-logicmachine-api/blob/master/LICENSE.md"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/antonfisher/node-logicmachine-api/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-mocha-test": "~0.12.7",
+    "grunt-eslint": "~7.0.1",
+    "eslint": "~0.15.1",
+    "mocha": "~2.1.0",
+    "chai": "~2.1.0"
+  }
+}
