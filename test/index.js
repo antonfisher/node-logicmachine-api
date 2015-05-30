@@ -2,7 +2,13 @@
 
 require('chai').should();
 var logicmachineApiDefault = require('../index.js')();
-var logicmachineApiCustom = require('../index.js')('10.10.10.10:8080', 'bob', 'sponge', 'https', 'xml');
+var logicmachineApiCustom = require('../index.js')({
+    host: '10.10.10.10:8080',
+    username: 'bob',
+    password: 'sponge',
+    protocol: 'https',
+    format: 'xml'
+});
 
 describe('#createUrl', function () {
 

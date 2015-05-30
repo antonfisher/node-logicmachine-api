@@ -17,21 +17,32 @@ var url = require('url');
  * Create a module.
  *
  * @public
- * @param {String} host     default '192.168.0.10:80'
- * @param {String} username default 'remote'
- * @param {String} password default 'remote'
- * @param {String} protocol default 'http'
- * @param {String} format   default 'json'
- * @param {String} apiPath  default '/cgi-bin/scada-remote/request.cgi'
+ * @param {Object}           config
+ * @param {String}           config.host     default '192.168.0.10:80'
+ * @param {String}           config.username default 'remote'
+ * @param {String}           config.password default 'remote'
+ * @param {String}           config.protocol default 'http'
+ * @param {String}           config.format   default 'json'
+ * @param {String}           config.apiPath  default '/cgi-bin/scada-remote/request.cgi'
+ * @param {Boolean|Function} config.logger   default console.log
  * @returns {Object}
  */
-module.exports = function (host, username, password, protocol, format, apiPath) {
-    host = host || '192.168.0.10:80';
-    username = username || 'remote';
-    password = password || 'remote';
-    protocol = protocol || 'http';
-    format = format || 'json';
-    apiPath = apiPath || '/cgi-bin/scada-remote/request.cgi';
+module.exports = function (config) {
+    config = config || {};
+
+    var host = config.host || '192.168.0.10:80';
+    var username = config.username || 'remote';
+    var password = config.password || 'remote';
+    var protocol = config.protocol || 'http';
+    var format = config.format || 'json';
+    var apiPath = config.apiPath || '/cgi-bin/scada-remote/request.cgi';
+    var logger = console.log;
+
+    if (config.logger === false) {
+        logger = function () {};
+    } else if (typeof config.logger === 'function') {
+        logger = config.logger;
+    }
 
     var _bindResponseFunction = function (self, callback) {
         return function (res) {
@@ -42,14 +53,16 @@ module.exports = function (host, username, password, protocol, format, apiPath) 
             });
 
             res.on('end', function () {
-                var json;
+                if (res.statusCode !== 200) {
+                    callback.apply(self, ['Responce status code: ' + res.statusCode + ' (' + data + ')']);
+                } else {
+                    try {
+                        var json = JSON.parse(data.replace(/\\'/g, '\''));
 
-                try {
-                    json = JSON.parse(data);
-
-                    callback.apply(self, [undefined, json]);
-                } catch (e) {
-                    callback.apply(self, [e.message]);
+                        callback.apply(self, [undefined, json]);
+                    } catch (e) {
+                        callback.apply(self, [e.message]);
+                    }
                 }
             });
         };
@@ -62,6 +75,8 @@ module.exports = function (host, username, password, protocol, format, apiPath) 
     };
 
     var _doRequest = function (requestUrl, callback) {
+        logger('node-logicmachine-api REQUEST to: ' + requestUrl);
+
         return http
             .get(requestUrl, _bindResponseFunction(this, callback))
             .on('error', _bindErrorFunction(this, callback));
