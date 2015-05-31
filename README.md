@@ -95,6 +95,7 @@ Please take care to maintain the existing coding style, unit tests for any chang
 ## Release History
 
 * 0.1.0 Initial release
+* 0.1.1 Update initial params, add logger configuration
 
 ## Links:
 * [http://evika.ru/](http://evika.ru/)
