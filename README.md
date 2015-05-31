@@ -20,13 +20,13 @@ Module init params:
 
 ```javascript
 var logicmachineApi = require('node-logicmachine-api')({
-    host: '10.10.10.10',    // {String} default '192.168.0.10:80'
-    username: 'bob',        // {String} default 'remote'
-    password: 'sponge',     // {String} default 'remote'
-    protocol: 'https',      // {String} default 'http'
-    format: 'json',         // {String} default 'json' ['json', 'xml', 'rss']
-    apiPath: '/secret-path' // {String} default '/cgi-bin/scada-remote/request.cgi'
-    logger: logger.debug    // {Function|Boolean} default console.log, false - to disable
+    host: '10.10.10.10',     // {String} default '192.168.0.10:80'
+    username: 'bob',         // {String} default 'remote'
+    password: 'sponge',      // {String} default 'remote'
+    protocol: 'https',       // {String} default 'http'
+    format: 'json',          // {String} default 'json' ['json', 'xml', 'rss']
+    apiPath: '/secret-path', // {String} default '/cgi-bin/scada-remote/request.cgi'
+    logger: logger.debug     // {Function|Boolean} default console.log
 })
 ```
 
