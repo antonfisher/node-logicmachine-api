@@ -101,6 +101,6 @@ Please take care to maintain the existing coding style, unit tests for any chang
 * [http://evika.ru/](http://evika.ru/)
 
 ## License
-Copyright (c) 2015 Anton Fischer
+Copyright (c) 2016 Anton Fisher
 
 MIT License. Free use and change.
