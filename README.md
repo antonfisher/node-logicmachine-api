@@ -90,12 +90,14 @@ Run Grunt watch: `grunt watch`.
 
 ## Contributing
 
-Please take care to maintain the existing coding style, unit tests for any changed functionality. Eslint and test your code.
+Please take care to maintain the existing coding style, unit tests for any changed functionality.
+Use `npm run lint` and `npm test` your code.
 
 ## Release History
 
-* 0.1.0 Initial release
+* 0.1.2 Migrate to NodeJs v5, update dependencies, use standard code style
 * 0.1.1 Update initial params, add logger configuration
+* 0.1.0 Initial release
 
 ## Links:
 * [http://evika.ru/](http://evika.ru/)

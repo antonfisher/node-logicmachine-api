@@ -1,10 +1,18 @@
 {
   "name": "node-logicmachine-api",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "LogicMachine Remote services API (evika.ru)",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha test"
+    "start": "./node_modules/.bin/grunt watch",
+    "test": "./node_modules/.bin/mocha test",
+    "lint": "./node_modules/.bin/standard gulpfile.js index.js ./test/*.js | ./node_modules/.bin/snazzy"
+  },
+  "standard": {
+    "globals": [
+      "it",
+      "describe"
+    ]
   },
   "repository": {
     "type": "git",
@@ -29,12 +37,12 @@
     "url": "https://github.com/antonfisher/node-logicmachine-api/issues"
   },
   "devDependencies": {
-    "grunt": "0.x",
-    "grunt-contrib-watch": "0.x",
+    "chai": "3.x",
+    "grunt": "1.x",
+    "grunt-contrib-watch": "1.x",
     "grunt-mocha-test": "0.x",
-    "grunt-eslint": "18.x",
-    "eslint": "2.x",
     "mocha": "2.x",
-    "chai": "3.x"
+    "snazzy": "3.x",
+    "standard": "6.x"
   }
 }
