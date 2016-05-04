@@ -42,7 +42,7 @@
     "grunt-contrib-watch": "1.x",
     "grunt-mocha-test": "0.x",
     "mocha": "2.x",
-    "snazzy": "3.x",
-    "standard": "6.x"
+    "snazzy": "4.x",
+    "standard": "7.x"
   }
 }
