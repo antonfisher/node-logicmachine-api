@@ -1,6 +1,6 @@
 # node-logicmachine-api
 
-[![Build Status](https://travis-ci.org/antonfisher/node-logicmachine-api.svg)](https://travis-ci.org/antonfisher/node-logicmachine-api)
+[![build](https://travis-ci.org/antonfisher/node-logicmachine-api.svg)](https://travis-ci.org/antonfisher/node-logicmachine-api)
 [![npm](https://img.shields.io/npm/dt/node-logicmachine-api.svg?maxAge=86400)](https://www.npmjs.com/package/node-logicmachine-api)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 ![status](https://img.shields.io/badge/status-beta-lightgray.svg)
